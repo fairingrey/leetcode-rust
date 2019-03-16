@@ -8,7 +8,9 @@ impl Solution {
 
         for c in s.chars() {
             for d in j.chars() {
-                if c == d { count += 1; }
+                if c == d {
+                    count += 1;
+                }
             }
         }
 
@@ -22,7 +24,13 @@ mod tests {
 
     #[test]
     fn n0771_1() {
-        assert_eq!(3, Solution::num_jewels_in_stones("aA".to_owned(), "aAAbbbb".to_owned()));
-        assert_eq!(0, Solution::num_jewels_in_stones("z".to_owned(), "ZZ".to_owned()));
+        assert_eq!(
+            3,
+            Solution::num_jewels_in_stones("aA".to_owned(), "aAAbbbb".to_owned())
+        );
+        assert_eq!(
+            0,
+            Solution::num_jewels_in_stones("z".to_owned(), "ZZ".to_owned())
+        );
     }
 }

@@ -7,10 +7,8 @@ impl Solution {
         let mut count: i32 = 0;
 
         for c in s.chars() {
-            for d in j.chars() {
-                if c == d {
-                    count += 1;
-                }
+            if j.contains(c) {
+                count += 1;
             }
         }
 

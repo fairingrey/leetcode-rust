@@ -3,23 +3,21 @@
 pub struct Solution {}
 impl Solution {
     pub fn product_except_self(nums: Vec<i32>) -> Vec<i32> {
-        let mut res_vec: Vec<i32> = Vec::new();
+        let mut products: Vec<i32> = vec![1; nums.len()];
+        let mut left: i32 = 1;
+        let mut right: i32 = 1;
 
-        for (index, _num) in nums.iter().enumerate() {
-            let product = nums
-                .get(0..index)
-                .expect("oops")
-                .iter()
-                .fold(1, |acc, x| acc * x)
-                * nums
-                    .get(index + 1..nums.len())
-                    .expect("oops")
-                    .iter()
-                    .fold(1, |acc, x| acc * x);
-            res_vec.push(product);
+        for (num, product) in nums.iter().zip(products.iter_mut()) {
+            *product *= left;
+            left *= num;
         }
 
-        res_vec
+        for (num, product) in nums.iter().rev().zip(products.iter_mut().rev()) {
+            *product *= right;
+            right *= num;
+        }
+
+        products
     }
 }
 

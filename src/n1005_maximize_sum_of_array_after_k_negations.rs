@@ -9,6 +9,6 @@ impl Solution {
             a[0] *= -1;
             a.sort_unstable();
         }
-        a.iter().fold(0, |acc, x| acc + x)
+        a.iter().sum()
     }
 }

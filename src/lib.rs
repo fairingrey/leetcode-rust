@@ -1,5 +1,6 @@
 #![allow(dead_code)]
 
+mod n0015_3sum;
 mod n0226_invert_binary_tree;
 mod n0238_product_of_array_except_self;
 mod n0349_intersection_of_two_arrays;

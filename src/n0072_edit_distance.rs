@@ -57,4 +57,12 @@ mod tests {
             Solution::min_distance(String::from("kitten"), String::from("sitting"))
         );
     }
+
+    #[test]
+    pub fn n0072_3() {
+        assert_eq!(
+            1,
+            Solution::min_distance(String::from(""), String::from("a"))
+        );
+    }
 }

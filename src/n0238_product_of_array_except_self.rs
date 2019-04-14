@@ -12,7 +12,7 @@ impl Solution {
             left *= num;
         }
 
-        for (num, product) in nums.iter().rev().zip(products.iter_mut().rev()) {
+        for (num, product) in nums.iter().zip(products.iter_mut()).rev() {
             *product *= right;
             right *= num;
         }

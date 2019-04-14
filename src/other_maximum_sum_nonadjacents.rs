@@ -18,7 +18,7 @@ impl Solution {
         let mut sum_include_prev = nums[0];
         let mut sum_exclude_prev = 0;
 
-        let mut iterator = nums.iter().skip(1);
+        let iterator = nums.iter().skip(1);
 
         for num in iterator {
             if sum_exclude_prev + *num >= sum_include_prev {
@@ -29,11 +29,7 @@ impl Solution {
             std::mem::swap(&mut sum_exclude_prev, &mut sum_include_prev);
         }
 
-        if sum_include_prev > sum_exclude_prev {
-            sum_include_prev
-        } else {
-            sum_exclude_prev
-        }
+        std::cmp::max(sum_include_prev, sum_exclude_prev)
     }
 }
 

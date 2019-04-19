@@ -10,8 +10,8 @@ impl Solution {
         let mut prev_row = vec![0; word1.len() + 1];
         let mut cur_row = vec![0; word1.len() + 1];
 
-        for i in 0..prev_row.len() {
-            prev_row[i] = i;
+        for (i, e) in prev_row.iter_mut().enumerate() {
+            *e = i;
         }
 
         let mut nword1 = String::from("_");

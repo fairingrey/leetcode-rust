@@ -15,15 +15,13 @@ impl Solution {
     pub fn estimate_pi(runs: usize) -> f64 {
         let mut rng = rand::thread_rng();
 
-        (0..runs).fold(0, |acc, _| {
-            let (x, y) = (rng.gen::<f64>(), rng.gen::<f64>());
-            if x.powi(2) + y.powi(2) <= 1. {
+        f64::from((0..runs).fold(0, |acc, _| {
+            if rng.gen::<f64>().powi(2) + rng.gen::<f64>().powi(2) <= 1. {
                 acc + 1
             } else {
                 acc
             }
-        }) as f64
-            * 4.
+        })) * 4.
             / (runs as f64)
     }
 }

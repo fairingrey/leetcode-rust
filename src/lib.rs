@@ -5,6 +5,7 @@ mod n0070_climbing_stairs;
 mod n0072_edit_distance;
 mod n0226_invert_binary_tree;
 mod n0238_product_of_array_except_self;
+mod n0340_longest_substring_with_at_most_k_distinct_characters;
 mod n0349_intersection_of_two_arrays;
 mod n0350_intersection_of_two_arrays_ii;
 mod n0709_to_lower_case;

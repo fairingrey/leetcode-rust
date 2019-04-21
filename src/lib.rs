@@ -8,6 +8,7 @@ mod n0238_product_of_array_except_self;
 mod n0340_longest_substring_with_at_most_k_distinct_characters;
 mod n0349_intersection_of_two_arrays;
 mod n0350_intersection_of_two_arrays_ii;
+mod n0388_longest_absolute_file_path;
 mod n0709_to_lower_case;
 mod n0771_jewels_and_stones;
 mod n1005_maximize_sum_of_array_after_k_negations;

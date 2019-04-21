@@ -77,14 +77,20 @@ mod tests {
     fn n0340_3() {
         assert_eq!(
             String::from("aaaaa"),
-            Solution::longest_substr_with_at_most_k_distinct_chars(String::from("aaaaabbcaaaaa"), 1)
+            Solution::longest_substr_with_at_most_k_distinct_chars(
+                String::from("aaaaabbcaaaaa"),
+                1
+            )
         );
     }
     #[test]
     fn n0340_4() {
         assert_eq!(
             String::from("cadcacacaca"),
-            Solution::longest_substr_with_at_most_k_distinct_chars(String::from("abcadcacacaca"), 3)
+            Solution::longest_substr_with_at_most_k_distinct_chars(
+                String::from("abcadcacacaca"),
+                3
+            )
         );
     }
 }

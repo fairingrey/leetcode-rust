@@ -1,5 +1,6 @@
 #![allow(dead_code)]
 
+mod n0004_median_of_two_sorted_arrays;
 mod n0015_3sum;
 mod n0070_climbing_stairs;
 mod n0072_edit_distance;

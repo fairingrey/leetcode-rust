@@ -19,7 +19,7 @@ impl Solution {
         false
     }
 
-    // This is an alternate solution that works (and also generalizes the length of the subsequence
+    // This is an alternate solution that works (and also generalizes the length of the subsequence)
     pub fn increasing_subsequence_generalized(nums: Vec<i32>) -> bool {
         let subseq_length = 3;
 
